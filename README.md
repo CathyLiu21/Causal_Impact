@@ -3,3 +3,5 @@ The marketing team recently conducted a media campaign on a product ABC and woul
 Data : target: sales; covaraites: three types of media spend and holiday
 pre-period: Jan 01, 2022-Aug 31, 2023
 post-period: Sept 01, 2023-Dec 31,2023
+
+The model used is Bayesian structure time series modeling (BSTS) with pybuc. Google has an R package called CausalImapct can estimate the causal effect of a designed intervention on a time series. I love it but the Python version is somewhat lack of flexibility (e.g., the underlying UnobservedComponents model from statsmodels package is not Bayesian). I recently discrovered a Python Bayesian Unobserved Components library (pybuc), which is an implenmentation of R's Bayesian structural time series package (bsts) can do the BSTS modeling for causal impact analysis. Alternatively, PyMC now has experimental support for linear, Gaussian state space time series models via the pymc_experimental.statespace module. Here is the link.
